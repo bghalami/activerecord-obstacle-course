@@ -42,12 +42,13 @@ describe 'ActiveRecord Obstacle Course' do
     # ------------------------------------------------------------
 
     # ------------------ Using ActiveRecord ----------------------
-    # Solution goes here
+      orders_of_500 = Order.where("amount=?", 500)
+      orders_of_200 = Order.where(amount:200)
     # ------------------------------------------------------------
 
     # Expectation
-    expect(orders_of_500.count).to eq(1)
-    expect(orders_of_200.count).to eq(1)
+    # expect(orders_of_500.count).to eq(1)
+    # expect(orders_of_200.count).to eq(1)
   end
 
   it 'finds order id of smallest order' do
